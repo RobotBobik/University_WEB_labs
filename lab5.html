@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportyStyle - Головна</title>
+    <style>
+        /* CSS стилі */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        nav a:active {
+            background-color: #777;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #animatedElement {
+            width: 200px;
+            height: 200px;
+            background-color: #28a745;
+            margin: 20px auto;
+            transition: background-color 0.5s ease, transform 0.5s ease; /* Анімація */
+        }
+    </style>
+    <script>
+        // JavaScript код
+        function changeBackground() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function animateElement() {
+            const element = document.getElementById('animatedElement');
+            element.style.backgroundColor = getRandomColor();
+            element.style.transform = 'scale(1.2)'; // Збільшуємо елемент
+            setTimeout(() => {
+                element.style.transform = 'scale(1)'; // Повертаємо до початкового розміру
+            }, 500);
+        }
+
+        window.onload = function() {
+            const button = document.getElementById('changeColorButton');
+            button.onclick = changeBackground; // Зміна фону при натисканні на кнопку
+            const animatedElement = document.getElementById('animatedElement');
+            animatedElement.onmouseover = animateElement; // Анімація при наведенні
+        };
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Ласкаво просимо до SportyStyle</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="catalog.html">Каталог товарів</a></li>
+        <li><a href="men.html">Чоловічий одяг</a></li>
+        <li><a href="women.html">Жіночий одяг</a></li>
+        <li><a href="kids.html">Дитячий одяг</a></li>
+        <li><a href="sales.html">Акції та знижки</a></li>
+        <li><a href="about.html">Про нас</a></li>
+        <li><a href="contacts.html">Контакти</a></li>
+        <li><a href="delivery.html">Доставка і оплата</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <h2>Головна сторінка</h2>
+    <p>Ласкаво просимо до інтернет-магазину спортивного одягу SportyStyle!</p>
+    <button id="changeColorButton">Змінити фон сторінки</button>
+    <div id="animatedElement"></div> <!-- Елемент для анімації -->
+</div>
+
+<footer>
+    <p>&copy; 2024 SportyStyle. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>
