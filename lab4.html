@@ -23,6 +23,16 @@
             padding: 10px;
             text-align: center;
         }
+        /* Список меню */
+        nav ul {
+            list-style-type: none; /* Прибираємо маркери списку */
+            padding: 0; /* Вимикаємо відступи */
+            margin: 0; /* Вимикаємо зовнішні відступи */
+            display: flex; /* Виставляємо елементи в горизонтальному порядку */
+        }
+        nav li {
+            margin: 0 10px; /* Додаємо відступи між елементами меню */
+        }
         nav a {
             color: #fff;
             text-decoration: none;
@@ -30,7 +40,10 @@
             display: inline-block;
         }
         nav a:hover {
-            background-color: #555;
+            background-color: #555; /* Зміна кольору фону при наведенні */
+        }
+        nav a:active {
+            background-color: #777; /* Зміна кольору фону при натисканні */
         }
         .content {
             padding: 20px;
@@ -45,33 +58,6 @@
             width: 100%;
             bottom: 0;
         }
-
-        /* Додаткові стилі */
-        .highlight {
-            background-color: #ffeb3b; /* Жовтий фон для виділення */
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .nav-menu {
-            list-style: none; /* Прибираємо маркери */
-            padding: 0; /* Прибираємо відступи */
-            display: flex; /* Виставляємо елементи в горизонтальному порядку */
-            justify-content: center; /* Центруємо меню */
-        }
-
-        .nav-menu li {
-            margin: 0 15px; /* Відстань між елементами */
-        }
-
-        .nav-menu li a {
-            padding: 10px 15px;
-            transition: background-color 0.3s; /* Анімація зміни кольору */
-        }
-
-        .nav-menu li a:hover {
-            background-color: #555; /* Колір фону при наведенні */
-        }
     </style>
 </head>
 <body>
@@ -81,7 +67,7 @@
 </header>
 
 <nav>
-    <ul class="nav-menu">
+    <ul>
         <li><a href="index.html">Головна</a></li>
         <li><a href="catalog.html">Каталог товарів</a></li>
         <li><a href="men.html">Чоловічий одяг</a></li>
@@ -97,7 +83,6 @@
 <div class="content">
     <h2>Головна сторінка</h2>
     <p>Ласкаво просимо до інтернет-магазину спортивного одягу SportyStyle!</p>
-    <p class="highlight">Відкрийте для себе наш широкий асортимент товарів!</p>
 </div>
 
 <footer>
