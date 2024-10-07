@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мій Веб-Сайт</title>
+    <style>
+        /* Центрування вмісту сторінки */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Стилізація таблиці */
+        table {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
+    <!-- Заголовок сторінки -->
     <h1>Ласкаво просимо на мій веб-сайт</h1>
-
+    
     <!-- Список -->
     <h2>Мій список</h2>
-    <ul>
+    <ul style="text-align: left;">
         <li>Перший пункт</li>
         <li>Другий пункт</li>
         <li>Третій пункт</li>
     </ul>
-
+    
     <!-- Таблиця -->
     <h2>Моя таблиця</h2>
     <table border="1">
@@ -32,13 +48,15 @@
             <td>30</td>
         </tr>
     </table>
-
+    
     <!-- Зображення -->
     <h2>Моє зображення</h2>
-    <img src="https://example.com/image.jpg" alt="Приклад зображення" width="400">
-
+    <!-- Замінено на зображення-заповнювач, оскільки зовнішні зображення не дозволені -->
+    <img src="/api/placeholder/400/300" alt="Приклад зображення" width="400">
+    
     <!-- Відео з YouTube -->
     <h2>Моє відео</h2>
+    <!-- Примітка: вбудоване відео YouTube може не відображатися в цьому середовищі -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/1t6m6mH26Xo" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
