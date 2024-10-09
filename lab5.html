@@ -11,6 +11,7 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s; /* Плавна зміна фону */
         }
         header {
             background-color: #333;
@@ -23,6 +24,7 @@
             padding: 10px;
             text-align: center;
         }
+        /* Список меню */
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -37,6 +39,7 @@
             text-decoration: none;
             padding: 10px 20px;
             display: inline-block;
+            transition: background-color 0.3s;
         }
         nav a:hover {
             background-color: #555;
@@ -48,6 +51,17 @@
             padding: 20px;
             text-align: center;
         }
+        .change-bg-btn {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .change-bg-btn:hover {
+            background-color: #555;
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -57,45 +71,7 @@
             width: 100%;
             bottom: 0;
         }
-        #animatedElement {
-            width: 200px;
-            height: 200px;
-            background-color: #28a745;
-            margin: 20px auto;
-            transition: background-color 0.5s ease, transform 0.5s ease; /* Анімація */
-        }
     </style>
-    <script>
-        // JavaScript код
-        function changeBackground() {
-            document.body.style.backgroundColor = getRandomColor();
-        }
-
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        function animateElement() {
-            const element = document.getElementById('animatedElement');
-            element.style.backgroundColor = getRandomColor();
-            element.style.transform = 'scale(1.2)'; // Збільшуємо елемент
-            setTimeout(() => {
-                element.style.transform = 'scale(1)'; // Повертаємо до початкового розміру
-            }, 500);
-        }
-
-        window.onload = function() {
-            const button = document.getElementById('changeColorButton');
-            button.onclick = changeBackground; // Зміна фону при натисканні на кнопку
-            const animatedElement = document.getElementById('animatedElement');
-            animatedElement.onmouseover = animateElement; // Анімація при наведенні
-        };
-    </script>
 </head>
 <body>
 
@@ -120,13 +96,23 @@
 <div class="content">
     <h2>Головна сторінка</h2>
     <p>Ласкаво просимо до інтернет-магазину спортивного одягу SportyStyle!</p>
-    <button id="changeColorButton">Змінити фон сторінки</button>
-    <div id="animatedElement"></div> <!-- Елемент для анімації -->
+    
+    <!-- Кнопка для зміни кольору фону -->
+    <button class="change-bg-btn" onclick="changeBackgroundColor()">Змінити колір фону</button>
 </div>
 
 <footer>
     <p>&copy; 2024 SportyStyle. Всі права захищені.</p>
 </footer>
+
+<script>
+    // Функція для зміни кольору фону
+    function changeBackgroundColor() {
+        const colors = ['#f4f4f4', '#a8dadc', '#f1faee', '#e63946', '#457b9d'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+    }
+</script>
 
 </body>
 </html>
