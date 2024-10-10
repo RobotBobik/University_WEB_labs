@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Випадковий жарт</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $.get('jokes.txt', function(data) {
+            var jokes = data.split('\n').filter(Boolean);
+            var randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+            $('#joke').text(randomJoke);
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>Випадковий жарт:</h1>
+    <p id="joke"></p>
+</body>
+</html>
