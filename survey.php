@@ -6,15 +6,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $question2 = $_POST["question2"];
     $question3 = $_POST["question3"];
 
+    // Створюємо змінну з даними опитування
     $data = "Ім'я: $name\n";
     $data .= "Email: $email\n";
     $data .= "Питання 1: $question1\n";
     $data .= "Питання 2: $question2\n";
     $data .= "Питання 3: $question3\n";
-
-    $filename = "survey/" . date("Y-m-d_H-i-s") . ".txt";
+    
+    // Створюємо шлях до файлу в папці /var/www/html/mysite/survey/
+    $filename = "/var/www/html/mysite/survey/" . date("Y-m-d_H-i-s") . ".txt";
+    
+    // Зберігаємо дані у файл
     file_put_contents($filename, $data);
 
+    // Час відправки
     $submission_time = date("Y-m-d H:i:s");
     echo "<p>Дякуємо за участь в опитуванні! Ваша відповідь була збережена $submission_time.</p>";
 }
