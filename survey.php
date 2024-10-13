@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Опитування - SportyStyle</title>
     <style>
-        /* Додайте сюди стилі з вашого основного файлу */
+        /* Додайте сюди стил з вашого основного файлу */
     </style>
 </head>
 <body>
