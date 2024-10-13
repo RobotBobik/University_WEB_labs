@@ -1,4 +1,4 @@
-<?php
+<?php   
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $question2 = $_POST["question2"];
     $question3 = $_POST["question3"];
 
-    // Створюємо змінну з даними опитування
+    // Створюємо змінну з даними опитування Для тесту
     $data = "Ім'я: $name\n";
     $data .= "Email: $email\n";
     $data .= "Питання 1: $question1\n";
