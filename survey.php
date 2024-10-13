@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data .= "Питання 2: $question2\n";
     $data .= "Питання 3: $question3\n";
     
-    // Створюємо шлях до файлу в папці /var/www/html/mysite/survey/
+    // Створюємо шлях до файлу в папці /var/www/html/mysite/survey/ просто
     $filename = "/var/www/html/mysite/survey/" . date("Y-m-d_H-i-s") . ".txt";
     
     // Зберігаємо дані у файл
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </header>
 
 <nav>
-    <!-- Додайте сюди ваше меню навігації -->
+    <!-- Додайте сюди ваше меню навігації  точно-->
 </nav>
 
 <div class="content">
